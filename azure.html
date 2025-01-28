@@ -1,32 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-<script>
-body{background:#ff6347;margin:0}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<script src="js/jquery.min.js"></script>
+	<style type="text/css">
+	@import "https://fonts.googleapis.com/css?family=Raleway";
+* { box-sizing: border-box; }
+body { 
+  margin: 0; 
+  padding: 0; 
+  background: #333;
+  font-family: Raleway; 
+  text-transform: uppercase; 
+  font-size: 11px; 
+}
+h1{ margin: 0; }
+#contact { 
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  margin: 4em auto;
+  width: 100px; 
+  height: 30px; 
+  line-height: 30px;
+  background: teal;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid white;
+}
 
-.form{width:340px;height:440px;background:#e6e6e6;border-radius:8px;box-shadow:0 0 40px -10px #000;margin:calc(50vh - 220px) auto;padding:20px 30px;max-width:calc(100vw - 40px);box-sizing:border-box;font-family:'Montserrat',sans-serif;position:relative}
-h2{margin:10px 0;padding-bottom:10px;width:180px;color:#78788c;border-bottom:3px solid #78788c}
-input{width:100%;padding:10px;box-sizing:border-box;background:none;outline:none;resize:none;border:0;font-family:'Montserrat',sans-serif;transition:all .3s;border-bottom:2px solid #bebed2}
-input:focus{border-bottom:2px solid #78788c}
-p:before{content:attr(type);display:block;margin:28px 0 0;font-size:14px;color:#5a5a5a}
-button{float:right;padding:8px 12px;margin:8px 0 0;font-family:'Montserrat',sans-serif;border:2px solid #78788c;background:0;color:#5a5a6e;cursor:pointer;transition:all .3s}
-button:hover{background:#78788c;color:#fff}
-div{content:'Hi';position:absolute;bottom:-15px;right:-20px;background:#50505a;color:#fff;width:320px;padding:16px 4px 16px 0;border-radius:6px;font-size:13px;box-shadow:10px 10px 40px -14px #000}
-span{margin:0 5px 0 15px}
-</script>
-</head>
+#contact:hover { background: #666; }
+#contact:active { background: #444; }
+
+#contactForm { 
+  display: none;
+
+  border: 6px solid salmon; 
+  padding: 2em;
+  width: 400px;
+  text-align: center;
+  background: #fff;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%)
+  
+}
+
+input, textarea { 
+  margin: .8em auto;
+  font-family: inherit; 
+  text-transform: inherit; 
+  font-size: inherit;
+  
+  display: block; 
+  width: 280px; 
+  padding: .4em;
+}
+textarea { height: 80px; resize: none; }
+
+.formBtn { 
+  width: 140px;
+  display: inline-block;
+  
+  background: teal;
+  color: #fff;
+  font-weight: 100;
+  font-size: 1.2em;
+  border: none;
+  height: 30px;
+}
+	</style>
+   </head>
 <body>
+<div id="contactForm">
+<h1>Keep in touch!</h1>
+  <small>I'll get back to you as quickly as possible</small>
+  
 <form name="submit-to-google-sheet" class="form">
 	 <h2>CONTACT US</h2>
-    <p >Name: <input name="Name" placeholder="Write your name here.."></input> 
-    <p type="Email:"><input name="Email" placeholder="Let us know how to contact you back.."></input></p>  
-	<p type="Email:"><input name="Mobile" placeholder="Let us know how to reach you back.."></input></p> 
-	<p type="Message:"><input name="Message"  placeholder="What would you like to tell us.."></input></p>
+    <p >Name: <input name="Name" placeholder="Write your name here.."></input> </p>
+    <p> Email: <input name="Email" placeholder="Let us know how to contact you back.."></input></p>
+	<p> Mobile: <input name="Mobile" placeholder="Let us know how to reach you back.."></input></p>
+	<p> Message: <input name="Message"  placeholder="What would you like to tell us.."></input></p>
 	<button type="submit" name="submit" >Submit</button>
 	<span id="success"></span>
 </form>
+</div>
+<div id="contact">ContactJQUERY</div>
+<script>
+
+ $('#contact').click(function() {
+    
+	$('#contact').click(function() {
+    $('#contactForm').fadeToggle();
+  })
+  $(document).mouseup(function (e) {
+    var container = $("#contactForm");
+
+    if (!container.is(e.target) // if the target of the click isn't the container...
+        && container.has(e.target).length === 0) // ... nor a descendant of the container
+    {
+        container.fadeOut();
+    }
+  });
+});
+ 
+</script>
+
+
+
+  
 
 <script>
+
+
+
   const scriptURL = 'https://script.google.com/macros/s/AKfycbyHOT_W9aoL6PXKr2Gki7pjsgDsqIvE7W3iCt8yOsWf_38qoDDFDnSSGrMEpRlRj7S7bA/exec'
   const form = document.forms['submit-to-google-sheet']
   const success=document.getElementById("success");
@@ -47,3 +141,5 @@ span{margin:0 5px 0 15px}
 
 
 </body>
+
+

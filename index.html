@@ -1,14 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="css/generic.css" />
-    <link rel="stylesheet" href="css/all.min.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/templatemo-style.css" />
-    <title>MN Cloudsoft Technology</title>
+
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <title>MN Cloudsoft Technology</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/generic.css" />
+        <link rel="stylesheet" href="css/all.min.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/templatemo-style.css" />
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      </head>
+      <body>
+          
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      </body>
+    </html>
     
 <!--
 Mini Profile Template
@@ -82,6 +99,7 @@ https://templatemo.com/tm-530-mini-profile
 				  access and development of applications and services to individuals, companies, and governments through its global infrastructure. 
 				  It also provides capabilities that are usually not included within other cloud platforms, 
 				  including software as a service (SaaS), platform as a service (PaaS), infrastructure as a service (IaaS). 
+          <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal" data-backdrop="static">Register here</button> 
                 </p>
               </div>
             </div>
@@ -96,7 +114,8 @@ https://templatemo.com/tm-530-mini-profile
                   <span class="tm-title-small">(2018 September to Present)</span>
                 </h3>
                 <p class="mb-0">
-                  Azure DevOps is a comprehensive set of development tools and services provided by Microsoft to support the entire software development lifecycle. It is designed to help teams plan, develop, test, and deploy applications more efficiently, using a collaborative approach. Azure DevOps integrates with many popular technologies and services, making it a versatile platform for a wide range of development needs.
+                  Azure DevOps is a comprehensive set of development tools and services provided by Microsoft to support the entire software development lifecycle. It is designed to help teams plan, develop, test, and deploy applications more efficiently, using a collaborative approach. Azure DevOps integrates with many popular technologies and services, making it a versatile platform for a wide range of development needs. 
+				  <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal" data-backdrop="static">Register here</button> 
                 </p>
               </div>
             </div>
@@ -137,11 +156,77 @@ https://templatemo.com/tm-530-mini-profile
         </div>
       </div>
       <!-- container -->
+       <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+          <div class="modal-dialog" role="document" >
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Register for Azure</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form name="submit-to-google-sheet" class="form">
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label">Name</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" name="Name"  placeholder="Name">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-3 col-form-label">Email</label>
+                    <div class="col-sm-9">
+                      <input type="email" name="Email" class="form-control"  placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-3 col-form-label">Mobile </label>
+                    <div class="col-sm-9">
+                      <input type="text" name="Mobile" class="form-control"  placeholder="Mobile">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-3 col-form-label">Message </label>
+                    <div class="col-sm-9">
+                      <input type="text" name="Message" class="form-control"  placeholder="Message">
+                    </div>
+					<span id="success"></span>
+                  </div>
+                  <!-- <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-3 col-form-label">Technology</label>
+                    <div class="col-sm-9">
+                      <select id="inputState" class="form-control">
+                        <option selected>select
+                        </option>
+                        <option>Azure Cloud</option>
+                        <option>Azure DevOps</option>
+                        <option>AWS</option>
+                        <option>JAVA</option>
+                        <option>DOT NET</option>
+                        <option>PYTHON</option>
+                      </select>
+                    </div>
+                  </div>            -->
+              </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                  <button type="submit" class="btn btn-primary">Register</button>
+                </div>
+            </form>
+            </div>
+          </div>
+        </div>
     </div>
+
+    
     <!-- section -->
     <script src="js/jquery.min.js"></script>
     <script src="js/parallax.min.js"></script>
     <script>
+
+        
+
       function detectMsBrowser() {
         using_ms_browser =
           navigator.appName == "Microsoft Internet Explorer" ||
@@ -173,6 +258,25 @@ https://templatemo.com/tm-530-mini-profile
           setBrandMarginTop();
         });
       });
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyHOT_W9aoL6PXKr2Gki7pjsgDsqIvE7W3iCt8yOsWf_38qoDDFDnSSGrMEpRlRj7S7bA/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const success=document.getElementById("success");
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+          success.innerHTML="Successfullly Submitted";
+          setTimeout(function()
+          {
+          //success.innerHTML="";
+          //alert('Success');
+          },100 )
+          form.reset();
+          })
+            .catch(error => console.error('Error!', error.message))
+        })
     </script>
+      
   </body>
 </html>
